@@ -14,6 +14,7 @@
 		E41363FC221A3AF600064941 /* Bootstrap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E41363F9221A3AF600064941 /* Bootstrap.storyboard */; };
 		E41363FD221A3AF600064941 /* BootstrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41363FA221A3AF600064941 /* BootstrapViewController.swift */; };
 		E41363FE221A3AF600064941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41363FB221A3AF600064941 /* AppDelegate.swift */; };
+		E4136400221A404A00064941 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E41363FF221A404A00064941 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E41363F9221A3AF600064941 /* Bootstrap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bootstrap.storyboard; sourceTree = "<group>"; };
 		E41363FA221A3AF600064941 /* BootstrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapViewController.swift; sourceTree = "<group>"; };
 		E41363FB221A3AF600064941 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E41363FF221A404A00064941 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				E41363ED221A390A00064941 /* Assets.xcassets */,
 				E41363EF221A390A00064941 /* LaunchScreen.storyboard */,
 				E41363F2221A390A00064941 /* Info.plist */,
+				E41363FF221A404A00064941 /* GoogleService-Info.plist */,
 			);
 			path = FirebaseDemoApp;
 			sourceTree = "<group>";
@@ -92,9 +95,9 @@
 		E41363F8221A3AF600064941 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E41363FB221A3AF600064941 /* AppDelegate.swift */,
 				E41363F9221A3AF600064941 /* Bootstrap.storyboard */,
 				E41363FA221A3AF600064941 /* BootstrapViewController.swift */,
-				E41363FB221A3AF600064941 /* AppDelegate.swift */,
 			);
 			name = Sources;
 			path = FirebaseDemoApp/Sources;
@@ -111,6 +114,7 @@
 				E41363DF221A390800064941 /* Sources */,
 				E41363E0221A390800064941 /* Frameworks */,
 				E41363E1221A390800064941 /* Resources */,
+				DB0F2E2CEF909514AB8E7671 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +165,7 @@
 			files = (
 				E41363F1221A390A00064941 /* LaunchScreen.storyboard in Resources */,
 				E41363FC221A3AF600064941 /* Bootstrap.storyboard in Resources */,
+				E4136400221A404A00064941 /* GoogleService-Info.plist in Resources */,
 				E41363EE221A390A00064941 /* Assets.xcassets in Resources */,
 				E41363EC221A390800064941 /* Main.storyboard in Resources */,
 			);
@@ -189,6 +194,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB0F2E2CEF909514AB8E7671 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseDemoApp/Pods-FirebaseDemoApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseDemoApp/Pods-FirebaseDemoApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -353,7 +382,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.classmethod.yuichi.nakayasu.FirebaseDemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.classmethod.firebase.demo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -372,7 +401,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.classmethod.yuichi.nakayasu.FirebaseDemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.classmethod.firebase.demo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
